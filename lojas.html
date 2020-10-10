@@ -4,52 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lojas - Full Stack E-commerce</title>
+    <link rel="stylesheet" href="./css/estilo.css">
   </head>
   <body>
     <!-- Início do menu -->
-    <table width="100%" bgcolor="skyblue">
-      <tr>
-        <td align="center" width="25%"><a href="index.html"><img width="100px" src="./img/logo.png" alt="Logo do site" /></a></td>
-        <td align="center" width="25%"><a href="produtos.html"><font face="Arial" color="white" size="5px">Produtos</font></a></td>
-        <td align="center" width="25%"><a href="lojas.html"><font face="Arial" color="white" size="5px">Lojas</font></a></td>
-        <td align="center" width="25%"><a href="contato.html"><font face="Arial" color="white" size="5px">Contato</font></a></td>
-      </tr>
-    </table>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html"><img src="./img/logo.png" alt="Logo do site" /></a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="lojas.html">Lojas</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
     <!-- Fim do menu -->
-    <h2><font face="Arial">Nossas Lojas</font></h2>
-    <hr />
-    <table border=0 width="100%" cellpadding="20">
-      <tr>
-        <td width="33%">
-          <h3><font face="Arial">São Paulo</font></h3>
-          <p><font face="Arial">Av. Paulista, 2000</font></p>
-          <p><font face="Arial">10 &ordm; andar</font></p>
-          <p><font face="Arial">Jardins</font></p>
-          <p><font face="Arial">(11) 2222-2222</font></p>
-        </td>
-        <td width="33%">
-          <h3><font face="Arial">Floripa</font></h3>
-          <p><font face="Arial">Av. Beira Mar, 200</font></p>
-          <p><font face="Arial">1 &ordm; andar</font></p>
-          <p><font face="Arial">Beira Mar</font></p>
-          <p><font face="Arial">(48) 2222-0000</font></p>
-        </td>
-        <td width="33%">
-          <h3><font face="Arial">Rio de Janeiro</font></h3>
-          <p><font face="Arial">Av. Copacabana, 2300</font></p>
-          <p><font face="Arial">5 &ordm; andar</font></p>
-          <p><font face="Arial">Copacabana</font></p>
-          <p><font face="Arial">(21) 2121-3333</font></p>
-        </td>
-      </tr>
-    </table>
     <br><br><br><br>
-    <div width="100%" align="center">
-      <h4><font face="Arial" color="red">Formas de pagamento</font></h4>
-      <img width="20%" src="./img/Formasdepagamento.png" alt="Formas de pagamento" />
-    </div>
-    <footer>
-      <font face="Arial" align="center"><p>&copy; 2020  Recode Pro · Projeto Prático HTML Básico · E-commerce by Gabi Vespoli</p></font>
+    <br><br><br><br>
+
+    <main>
+    <header>
+      <h2>Nossas Lojas</h2>
+    </header>
+    <hr />
+
+    <section class="lojas">
+          <div class="loja_box">
+              <h3>São Paulo</h3>
+              <p>Av. Paulista, 2000</p>
+              <p>10 &ordm; andar</p>
+              <p>Jardins</p>
+              <p>(11) 2222-2222</p>
+          </div>
+          <div class="loja_box">
+            <h3>Rio de Janeiro</h3>
+            <p>Av. Copacabana, 2300</p>
+            <p>5 &ordm; andar</p>
+            <p>Copacabana</p>
+            <p>(21) 2121-3333</p>
+          </div>
+          <div class="loja_box">
+            <h3>Floripa</h3>
+            <p>Av. Beira Mar, 200</p>
+            <p>1 &ordm; andar</p>
+            <p>Beira Mar</p>
+            <p>(48) 2222-0000</p>
+          </div>
+    </section>
+    <section class="galeria">
+      <img src="./img/img_lojas.png" alt="Fotos de São Paulo, Rio de Janeiro e Florianópolis">
+    </section>
+
+  </main>
+
+    <br><br><br><br>
+    <footer id="rodape">
+      <p id="formas_pagamento"><b>Formas de pagamento</b></p>
+      <img src="./img/Formasdepagamento.png" alt="Formas de pagamento" />
+      <br><br><br><br>
+      <p>&copy; 2020  Recode Pro · Projeto Prático CSS Básico · E-commerce by Gabi Vespoli</p>
     </footer>
   </body>
 </html>

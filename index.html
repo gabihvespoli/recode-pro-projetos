@@ -4,30 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Full Stack E-commerce</title>
+    <link rel="stylesheet" href="./css/estilo.css">
   </head>
   <body>
     <!-- Início do menu -->
-    <table width="100%" bgcolor="skyblue">
-      <tr>
-        <td align="center" width="25%"><a href="index.html"><img width="100px" src="./img/logo.png" alt="Logo do site" /></a></td>
-        <td align="center" width="25%"><a href="produtos.html"><font face="Arial" color="white" size="5px">Produtos</font></a></td>
-        <td align="center" width="25%"><a href="lojas.html"><font face="Arial" color="white" size="5px">Lojas</font></a></td>
-        <td align="center" width="25%"><a href="contato.html"><font face="Arial" color="white" size="5px">Contato</font></a></td>
-      </tr>
-    </table>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html"><img src="./img/logo.png" alt="Logo do site" /></a></li>
+        <li><a href="produtos.html">Produtos</a></li>
+        <li><a href="lojas.html">Lojas</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
     <!-- Fim do menu -->
-    <h2><font face="Arial">Seja bem vindo(a)!</font></h2>
-    <p><font face="Arial">Aqui em nossa loja, <em>programadores tem desconto</em> nos produtos para a sua casa!</font></p>
-    <br><br><br><br><br>
-    <br><br><br><br><br>
-    <br><br><br><br><br>
-    <br><br><br><br><br>
-    <div width="100%" align="center">
-      <h4><font face="Arial" color="red">Formas de pagamento</font></h4>
-      <img width="20%" src="./img/Formasdepagamento.png" alt="Formas de pagamento" />
-    </div>
-    <footer>
-      <font face="Arial" align="center"><p>&copy; 2020  Recode Pro · Projeto Prático HTML Básico · E-commerce by Gabi Vespoli</p></font>
+    <br><br><br><br>
+    <br><br><br><br>
+
+    <main>
+      <h2>Seja bem vindo(a)!</h2>
+
+      <p>Aqui em nossa loja, <em>programadores tem desconto</em> nos produtos para a sua casa!</p>
+      <br><br><br><br><br>
+        <div class="foto">
+          <img src="./img/img_bv.jpg" alt="Imagem ilustrando compras na era digital">
+        </div>
+    </main>
+
+    <footer id="rodape">
+      <p id="formas_pagamento"><b>Formas de pagamento</b></p>
+      <img src="./img/Formasdepagamento.png" alt="Formas de pagamento" />
+      <br><br><br><br>
+      <p>&copy; 2020  Recode Pro · Projeto Prático CSS Básico · E-commerce by Gabi Vespoli</p>
     </footer>
   </body>
 </html>
