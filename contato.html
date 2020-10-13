@@ -11,9 +11,9 @@
     <nav class="menu">
       <ul>
         <li><a href="index.html"><img src="./img/logo.png" alt="Logo do site" /></a></li>
-        <li><a href="produtos.html">Produtos</a></li>
-        <li><a href="lojas.html">Lojas</a></li>
-        <li><a href="contato.html">Contato</a></li>
+        <li><a href="produtos.html" onmousedown="muda_cor(this)">Produtos</a></li>
+        <li><a href="lojas.html" onmousedown="muda_cor(this)">Lojas</a></li>
+        <li><a href="contato.html" onmousedown="muda_cor(this)">Contato</a></li>
       </ul>
     </nav>
     <!-- Fim do menu -->
@@ -41,15 +41,15 @@
       <h4>Envie uma mensagem para nós:</h4>
       <br>
       <form>
-        <input id="dadospessoais" type="text" placeholder="Escreva seu nome"/>
+        <input id="dadospessoais" type="text" placeholder="Escreva seu nome" onclick="muda_borda(this)"/>
         <br><br>
-        <input id="dadospessoais" type="email" placeholder="Escreva seu e-mail"/>
+        <input id="dadospessoais" type="email" placeholder="Escreva seu e-mail" onclick="muda_borda(this)"/>
         <br><br>
         <label>Deseja receber novidades do site?</label><br><br>
         <input type="radio" name="news"> Sim
         <input type="radio" name="news"> Não
         <br><br>
-        <textarea  placeholder="Digite sua mensagem"></textarea>
+        <textarea id="dadospessoais" placeholder="Digite sua mensagem" onclick="muda_borda(this)"></textarea>
         <br>
         <input class="buttom" type="submit" value="Enviar">
       </form>
@@ -63,5 +63,6 @@
       <br><br><br><br>
       <p>&copy; 2020  Recode Pro · Projeto Prático CSS Básico · E-commerce by Gabi Vespoli</p>
     </footer>
+    <script src="./js/script.js"></script>
   </body>
 </html>

@@ -49,6 +49,8 @@ main {
 
 .categorias li {
   list-style-type: none;
+  padding: 5px 0;
+  cursor: pointer;
 }
 
 .produtos {
@@ -63,6 +65,7 @@ main {
   text-align: center;
   vertical-align: middle;
   display: inline-block;
+  margin-right: 30px;
 }
 
 .box_produto img {
@@ -138,13 +141,22 @@ main {
 }
 
 input#dadospessoais{
+  outline: 0;
   width: 400px;
   height: 30px;
+  border-radius: 7px;
+  border-style: none;
+  border: solid 1px;
+  padding-left: 10px;
 }
 
 textarea {
+  outline: 0;
   height: 200px;
   width: 400px;
+  border-radius: 7px;
+  padding-top: 10px;
+  padding-left: 10px;
 }
 
 ::placeholder{
@@ -153,13 +165,15 @@ textarea {
 
 .buttom {
   margin-top: 10px;
-  width: 70px;
-  height: 30px;
-  border-radius: 50px;
+  width: 90px;
+  height: 40px;
+  border-radius: 20px;
   border: 0;
   background-color: lightskyblue;
   color: white;
+  font-size: 16px;
   opacity: 70%;
+  outline: 0;
 }
 
 .buttom:hover {
@@ -167,7 +181,7 @@ textarea {
 }
 
 #formas_pagamento {
-  color: red;
+  color: midnightblue;
   margin-bottom: 20px;
 }
 
@@ -175,10 +189,12 @@ textarea {
   width: 100%;
   text-align: center;
   font-weight: lighter;
-  color: rgb(73, 73, 73);
+  color: white;
   display: inline-block;
   margin-top: 50px;
-  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background-color: skyblue;
 }
 
 #rodape img {
