@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 26-Out-2020 às 16:48
+-- Tempo de geração: 03-Nov-2020 às 15:44
 -- Versão do servidor: 5.7.31
 -- versão do PHP: 7.3.21
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `produtosepedidos`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `comentarios`
+--
+
+DROP TABLE IF EXISTS `comentarios`;
+CREATE TABLE IF NOT EXISTS `comentarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL,
+  `email` varchar(80) NOT NULL,
+  `msg` varchar(300) NOT NULL,
+  `data` datetime DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Extraindo dados da tabela `comentarios`
+--
+
+INSERT INTO `comentarios` (`id`, `nome`, `email`, `msg`, `data`) VALUES
+(1, 'Teste', 'teste@teste.com.br', 'OlÃ¡, primeiro teste de envio de dados para a tabela comentarios.', '2020-11-03 12:34:59'),
+(2, 'Teste', 'teste@teste.com.br', 'OlÃ¡, segundo teste de envio de dados para a tabela comentarios.', '2020-11-03 12:41:04');
 
 -- --------------------------------------------------------
 
@@ -67,6 +91,7 @@ CREATE TABLE IF NOT EXISTS `produtos` (
   `idproduto` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) NOT NULL,
   `descricao` varchar(150) NOT NULL,
+  `preco_antigo` decimal(8,2) NOT NULL,
   `preco` decimal(8,2) NOT NULL,
   `imagem` varchar(255) NOT NULL,
   PRIMARY KEY (`idproduto`)
@@ -76,19 +101,19 @@ CREATE TABLE IF NOT EXISTS `produtos` (
 -- Extraindo dados da tabela `produtos`
 --
 
-INSERT INTO `produtos` (`idproduto`, `nome`, `descricao`, `preco`, `imagem`) VALUES
-(1, 'geladeira', 'Geladeira/Refrigerador Side By Side Frost Free Inox 504L Electrolux', '7789.05', './img/geladeira-eletrolux.png'),
-(2, 'microondas', 'Micro-Ondas 34L Preto Pro Series Electrolux', '4399.00', './img/microondas-eletrolux.png'),
-(3, 'microondas', 'Micro-ondas Branco com Função Tira Odor e Manter Aquecido 34L', '539.10', './img/microondas-eletrolux2.png'),
-(4, 'fogao', 'Fogão 5 Bocas Electrolux Prata Aut.com Mesa de Vidro e Tripla Chama', '2089.05', './img/fogao-eletrolux1.png'),
-(5, 'lavaloucas', 'Lava-Louças Electrolux 8 Serviços e 5 velocidades Cinza', '2249.10', './img/lava-lou%C3%A7as1.png'),
-(6, 'geladeira', 'Geladeira/Refrigerador Frost Free 310 Litros Branco Electrolux', '1799.10', './img/geladeira-eletrolux2.png'),
-(7, 'lavadora', 'Lava e Seca 11Kg/7Kg Electrolux Prata com Wi-fI e Água Quente/Vapor', '4084.05', './img/lava-roupas.png'),
-(8, 'fogao', 'Fogão 4 Bocas Electrolux Branco Aut. com Timer Digital e Forno de 70L', '1186.55', './img/fogao-eletrolux2.png'),
-(9, 'adega', 'Adega 8 Garrafas Com Acabamento Em Alumínio Escovado', '674.10', './img/adega.png'),
-(10, 'arcondicionado', 'Ar-Condicionado Inverter Split 9000 BTUs Electrolux Frio com Wi-fi - 220V', '1851.55', './img/ar-condicionado.png'),
-(11, 'filtro', 'Purificador de Água Prata com Painel Touch Bivolt', '559.55', './img/purificador-agua.png'),
-(12, 'cafeteira', 'Cafeteira Expressionist Display LCD Programável Electrolux', '599.90', './img/cafeteira.png');
+INSERT INTO `produtos` (`idproduto`, `nome`, `descricao`, `preco_antigo`, `preco`, `imagem`) VALUES
+(1, 'geladeira', 'Geladeira/Refrigerador Side By Side Frost Free Inox 504L Electrolux', '9789.05', '7789.05', './img/geladeira-eletrolux.png'),
+(2, 'microondas', 'Micro-Ondas 34L Preto Pro Series Electrolux', '4799.00', '4399.00', './img/microondas-eletrolux.png'),
+(3, 'microondas', 'Micro-ondas Branco com Função Tira Odor e Manter Aquecido 34L', '1039.10', '539.10', './img/microondas-eletrolux2.png'),
+(4, 'fogao', 'Fogão 5 Bocas Electrolux Prata Aut.com Mesa de Vidro e Tripla Chama', '2189.05', '2089.05', './img/fogao-eletrolux1.png'),
+(5, 'lava-loucas', 'Lava-Louças Electrolux 8 Serviços e 5 velocidades Cinza', '2949.10', '2249.10', './img/lava-lou%C3%A7as1.png'),
+(6, 'geladeira', 'Geladeira/Refrigerador Frost Free 310 Litros Branco Electrolux', '2299.10', '1799.10', './img/geladeira-eletrolux2.png'),
+(7, 'lava-roupas', 'Lava e Seca 11Kg/7Kg Electrolux Prata com Wi-fI e Água Quente/Vapor', '4999.05', '4084.05', './img/lava-roupas.png'),
+(8, 'fogao', 'Fogão 4 Bocas Electrolux Branco Aut. com Timer Digital e Forno de 70L', '1249.55', '1186.55', './img/fogao-eletrolux2.png'),
+(9, 'adega', 'Adega 8 Garrafas Com Acabamento Em Alumínio Escovado', '929.00', '674.10', './img/adega.png'),
+(10, 'ar-condicionado', 'Ar-Condicionado Inverter Split 9000 BTUs Electrolux Frio com Wi-fi - 220V', '1949.00', '1851.55', './img/ar-condicionado.png'),
+(11, 'filtro', 'Purificador de Água Prata com Painel Touch Bivolt', '729.00', '559.55', './img/purificador-agua.png'),
+(12, 'cafeteira', 'Cafeteira Expressionist Display LCD Programável Electrolux', '849.90', '599.90', './img/cafeteira.png');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

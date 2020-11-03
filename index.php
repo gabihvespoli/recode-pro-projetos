@@ -7,16 +7,9 @@
     <link rel="stylesheet" href="./css/estilo.css">
   </head>
   <body>
-    <!-- Início do menu -->
-    <nav class="menu">
-      <ul>
-        <li><a href="index.html"><img src="./img/logo.png" alt="Logo do site" /></a></li>
-        <li><a href="produtos.html" onmousedown="muda_cor(this)">Produtos</a></li>
-        <li><a href="lojas.html" onmousedown="muda_cor(this)">Lojas</a></li>
-        <li><a href="contato.html" onmousedown="muda_cor(this)">Contato</a></li>
-      </ul>
-    </nav>
-    <!-- Fim do menu -->
+    <!-- Menu -->
+    <?php include_once('menu.html');
+?>
     <br><br><br><br>
     <br><br><br><br>
 

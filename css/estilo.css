@@ -140,7 +140,7 @@ main {
   margin-top: 85px;
 }
 
-input#dadospessoais{
+input.dados-pessoais{
   outline: 0;
   width: 400px;
   height: 30px;
