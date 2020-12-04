@@ -27,13 +27,13 @@ function Lojas() {
                 <p className="card-text">(11) 2222-2222</p>
               </div>
               <div className="card-footer">
-                <buttom
+                <button
                   className="btn btn-info btn-block"
                   href="/Lojas"
                   disabled
                 >
                   Entrar em contato &raquo;
-                </buttom>
+                </button>
               </div>
             </div>
             <div className="card">
@@ -50,13 +50,13 @@ function Lojas() {
                 <p className="card-text">(21) 2121-3333</p>
               </div>
               <div className="card-footer">
-                <buttom
+                <button
                   className="btn btn-info btn-block"
                   href="/Lojas"
                   disabled
                 >
                   Entrar em contato &raquo;
-                </buttom>
+                </button>
               </div>
             </div>
             <div className="card">
@@ -73,13 +73,13 @@ function Lojas() {
                 <p className="card-text">(48) 2222-0000</p>
               </div>
               <div className="card-footer">
-                <buttom
+                <button
                   className="btn btn-info btn-block"
                   href="/Lojas"
                   disabled
                 >
                   Entrar em contato &raquo;
-                </buttom>
+                </button>
               </div>
             </div>
           </div>

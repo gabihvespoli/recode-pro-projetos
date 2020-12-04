@@ -33,22 +33,18 @@ function Produtos() {
     img.style.width = "120px";
   }
 
-  React.useEffect(async () => {
-    const url = "http://projetos/meteoro-eletro/backend/";
-    const response = await fetch(url);
-    setProdutos(await response.json());
+  React.useEffect(() => {
+    async function fetchData() {
+      const url = "http://projetos/meteoro-eletro/backend/";
+      const response = await fetch(url);
+      setProdutos(await response.json());
+    }
+    fetchData();
   }, []);
 
   // Retirando as categorias repetidas
-  const [categorias, setCategorias] = React.useState([]);
 
-  React.useEffect(async () => {
-    const url = "http://projetos/meteoro-eletro/backend/";
-    const response = await fetch(url);
-    setCategorias(await response.json());
-  }, []);
-
-  const categoria = categorias.map((categoria) => {
+  const categoria = produtos.map((categoria) => {
     const container = {};
     container.id = categoria.idcategoria;
     container.name = categoria.categoria;
@@ -105,6 +101,7 @@ function Produtos() {
                 {categoriafinal.map((categoria) => {
                   return (
                     <li
+                      key={categoria.id}
                       onClick={exibir_categoria}
                       id={categoria.id}
                       className="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
@@ -117,28 +114,13 @@ function Produtos() {
                   );
                 })}
               </ul>
-
-              {/* <ul className="list-group">
-            <li onClick={exibir_todos} className="list-group-item d-flex justify-content-between align-items-center">
-              Todos
-              <span className="badge badge-primary badge-pill">12</span>
-            </li>
-            {produtos.map((produto) => {
-              return(
-                <li onClick={exibir_categoria} id={produto.idcategoria} className="list-group-item d-flex justify-content-between align-items-center">
-                  {produto.categoria}
-                  <span className="badge badge-primary badge-pill">2</span>
-                </li>
-              )
-            })}
-          </ul> */}
             </div>
 
             <div className="col-9">
               {produtos.map((produto) => {
                 return (
                   <div
-                    key={produto.id}
+                    key={produto.idproduto}
                     className="box_produto mx-2 text-center"
                     id={produto.idcategoria}
                   >

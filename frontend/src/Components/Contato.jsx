@@ -4,11 +4,18 @@ function Contato() {
   const [contato, setContato] = React.useState([]);
   const [render, setRender] = React.useState(false);
   const [msg, setMsg] = React.useState(false);
+// Limpa o form
+  const [nome, setNome] = React.useState("");
+  const [email, setEmail] = React.useState("");
+  const [mensagem, setMensagem] = React.useState("");
 
-  React.useEffect(async () => {
-    const url = "http://projetos/meteoro-eletro/backend/comentarios.php";
-    const response = await fetch(url);
-    setContato(await response.json());
+  React.useEffect(() => {
+    async function fetchData() {
+      const url = "http://projetos/meteoro-eletro/backend/comentarios.php";
+      const response = await fetch(url);
+      setContato(await response.json());
+    }
+    fetchData();
   }, [render]);
 
   function enviarComentario(event) {
@@ -29,6 +36,10 @@ function Contato() {
           setMsg(false);
         }, 3000);
       });
+//Limpa o form
+    setNome("");
+    setEmail("");
+    setMensagem("");
   }
 
   return (
@@ -66,28 +77,35 @@ function Contato() {
           <div className="form-group">
             <h3>Envie uma mensagem para nós !</h3>
             <br />
-            <label for="nome">Nome</label>
+            <label htmlFor="nome">Nome</label>
             <input
               type="text"
               className="form-control mb-3"
               name="nome"
               id="nome"
+              value={nome}
+              onChange={(event) => setNome(event.target.value)}//Limpa o input
               placeholder="Digite seu nome"
             />
-            <label for="email">E-mail</label>
+            <label htmlFor="email">E-mail</label>
             <input
               type="email"
               className="form-control"
               name="email"
               id="email"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
               placeholder="Digite seu e-mail"
             />
             <br />
-            <label for="msg">Mensagem:</label>
+            <label htmlFor="msg">Mensagem:</label>
             <textarea
               className="form-control"
               name="msg"
               id="msg"
+              value={mensagem}
+              onChange={(event) => setMensagem(event.target.value)}
+              placeholder="Digite uma mensagem"
               rows="3"
             ></textarea>
           </div>
@@ -116,7 +134,7 @@ function Contato() {
                   <div className="card-body lead">{element.msg}</div>
                   <div className="card-footer border-0">
                     <small className="text-info">
-                      Enviado em {element.data}
+                      Enviado em {element.databr}
                     </small>
                   </div>
                 </div>
