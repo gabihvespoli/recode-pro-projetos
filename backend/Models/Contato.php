@@ -12,7 +12,8 @@ class Contato
   {
     $connection = Connection::getDb();
 
-    $stmt = $connection->query("SELECT * FROM comentarios ORDER BY data DESC");
+    $stmt = $connection->query("SELECT *,date_format(data,'%d/%m/%Y as %H:%ihs') AS databr FROM comentarios ORDER BY databr DESC");
+    
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
   }
 
